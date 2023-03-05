@@ -1,0 +1,42 @@
+IMPORT_DATA_TYPES:
+  - aechack_tender
+  - aechack_ontology
+
+SPACE_NAMES: 'aechack-{}'
+
+LSA_SETTINGS:
+  aechack-en:
+    dimensionality: 500
+    dimensionality_sentences: 200
+    rare_terms_filter: 5
+    common_terms_filter: 0.2
+    max_dict_size: 200000
+    n_best_bigrams: 200
+  aechack-fi:
+    dimensionality: 500
+    dimensionality_sentences: 200
+    rare_terms_filter: 5
+    common_terms_filter: 0.2
+    max_dict_size: 200000
+    n_best_bigrams: 200
+
+LANGUAGES:
+  - fi
+  - en
+
+DETECTION_LANGUAGES:  # Possible values in lang detection
+  - fi
+  - en
+
+STOPWORD_PROVIDENCE_CATEGORIES:
+  - generic
+
+INITIAL_IMPORT:
+  aechack_tender:
+    primary:
+      data:
+        - https://data.vxt-research.com/storage/aechack/vxt_tenders.json
+  aechack_ontology:
+    primary:
+      data:
+        - https://data.vxt-research.com/storage/aechack/ontology.ndjson
